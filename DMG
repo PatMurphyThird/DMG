@@ -1,0 +1,131 @@
+public class DMG {
+
+    private static String CreditsTextA = "<redacted>";
+    private static String CreditsTextB = "<redacted>";
+    private static String CreditsTextC = "<redacted>";
+
+    public static double getRange(double AX, double AY, double AZ, double BX, double BY, double BZ){
+        double range = 0;
+        double X = Math.abs((AX-BX)*(AX-BX));
+        double Y = Math.abs((AY-BY)*(AX-BY));
+        double Z = Math.abs((AZ-BZ)*(AX-BZ));
+        range = Math.sqrt(X+Y+Z);
+        return range;
+    }
+
+    public static int dieRoll(int dice, int adds){
+//      Generic D6 roller
+        int num = 0;
+        for (int i = 0; i<dice; i++){num+= Math.random() * 6 +1;}
+        num += adds;
+        return num;
+    }
+
+    public static int dieRollD2(int dice, int adds){
+        int num = 0;
+        for (int i = 0; i<dice; i++){num+= Math.random() * 2 +1;}
+        num += adds;
+        return num;
+    }
+
+    public static int dieRollD3(int dice, int adds){
+        int num = 0;
+        for (int i = 0; i<dice; i++){num+= Math.random() * 3 +1;}
+        num += adds;
+        return num;
+    }
+
+    public static int dieRollD4(int dice, int adds){
+        int num = 0;
+        for (int i = 0; i<dice; i++){num+= Math.random() * 4 +1;}
+        num += adds;
+        return num;
+    }
+
+    public static int dieRollD5(int dice, int adds){
+        int num = 0;
+        for (int i = 0; i<dice; i++){num+= Math.random() * 5 +1;}
+        num += adds;
+        return num;
+    }
+
+    public static int dieRollD6(int dice, int adds){
+//      Redundant D6 roller
+        int num = 0;
+        for (int i = 0; i<dice; i++){num+= Math.random() * 6 +1;}
+        num += adds;
+        return num;
+    }
+
+    public static int dieRollD8(int dice, int adds){
+        int num = 0;
+        for (int i = 0; i<dice; i++){num+= Math.random() * 8 +1;}
+        num += adds;
+        return num;
+    }
+
+    public static int dieRollD10(int dice, int adds){
+        int num = 0;
+        for (int i = 0; i<dice; i++){num+= Math.random() * 10 +1;}
+        num += adds;
+        return num;
+    }
+
+    public static int dieRollD12(int dice, int adds){
+        int num = 0;
+        for (int i = 0; i<dice; i++){num+= Math.random() * 12 +1;}
+        num += adds;
+        return num;
+    }
+
+    public static int dieRollD20(int dice, int adds){
+        int num = 0;
+        for (int i = 0; i<dice; i++){num+= Math.random() * 20 +1;}
+        num += adds;
+        return num;
+    }
+
+    public static double diePercent(){
+        double num = 0;
+        num = Math.random() * 100 +1;
+        return num;
+    }
+
+    public static double dieThousand(){
+//      Just because...
+        double num = 0;
+        num = Math.random() * 1000 +1;
+        return num;
+    }
+
+    public static double vary5(double varied){
+        double variant = Math.random()*100+950;
+        double num = (varied * variant)/1000;
+        return num;
+    }
+
+    public static double vary10(double varied){
+        double variant = Math.random()*200+900;
+        double num = (varied * variant)/1000;
+        return num;
+    }
+
+    public static double vary20(double varied){
+        double variant = Math.random()*400+800;
+        double num = (varied * variant)/1000;
+        return num;
+    }
+
+    public static double vary50(double varied){
+        double variant = Math.random()*1000+500;
+        double num = (varied * variant)/1000;
+        return num;
+    }
+
+    public static void displayCredits() {
+        System.out.println(CreditsTextA);
+        System.out.println(CreditsTextB);
+        System.out.println(CreditsTextC);
+    }
+
+}
